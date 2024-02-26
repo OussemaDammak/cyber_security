@@ -8,40 +8,46 @@ class StartScreen extends StatelessWidget {
   //final void Function() startQuiz;
   @override
   Widget build(context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-             Image.asset(
-              'assets/images/quiz-logo.png',
-              width: 250,
-              color: const Color.fromARGB(255, 11, 22, 129),
-            ),
-          const SizedBox(
-          height: 50,
-        ),
-           Text(
-            "Learn Flutter the fun way",
-            style: GoogleFonts.lato(
-              color: const Color.fromARGB(255, 11, 22, 129),
-              fontSize: 24,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        
+        centerTitle: false,
+        title: const Text('Subjects', style: TextStyle(fontWeight: FontWeight.bold,fontSize:28,),),
+        
+        actions: [
+          IconButton(
+            onPressed: (){},
+            icon: Image.asset(
+              'assets/images/logout.png',),
+              iconSize: 15,
+
+              
           ),
-           const SizedBox(
-          height: 30,
-        ),
-        /* OutlinedButton.icon(
-          onPressed: startQuiz,
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            textStyle: const TextStyle(
-              fontSize: 30,
-            ),
-          ),
-          icon: const Icon(Icons.arrow_forward) ,
-          label: const Text('Start Quiz'),
-        ) */
+
         ],
+
+      ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+              
+            const SizedBox(
+            height: 50,
+          ),
+             Text(
+              "Learn Flutter the fun way",
+              style: GoogleFonts.lato(
+                color: const Color.fromARGB(255, 11, 22, 129),
+                fontSize: 24,
+              ),
+            ),
+             const SizedBox(
+            height: 30,
+          ),
+         
+          ],
+        ),
       ),
     );
   }

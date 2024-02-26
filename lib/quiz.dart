@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cyber_security/start_screen.dart';
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 11, 22, 129),
+  seedColor: const Color.fromARGB(255, 251, 251, 1),
 );
 
 class Quiz extends StatefulWidget {
@@ -19,7 +19,6 @@ class _QuizState extends State<Quiz> {
     return MaterialApp(
      
      theme:ThemeData().copyWith(colorScheme:kColorScheme ,),
-    themeMode: ThemeMode.system,
     home: const StartScreen(),
     
     );
